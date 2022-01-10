@@ -1,0 +1,59 @@
+.toggle {
+    height: 1.5625rem;
+    width: 3.125rem;
+    border-radius: 50px;
+    margin: auto;
+    background-image: linear-gradient(aqua, skyblue);
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle.night {
+    background-image: linear-gradient(midnightblue, rebeccapurple);
+}
+
+.notch {
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 50%;
+    background: yellow;
+    position: absolute;
+    top: 2.5px;
+    left: 5px;
+    box-shadow: 0 0 5px yellow;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.notch > .crater {
+    background: burlywood;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4) inset;
+}
+.night .crater {
+    opacity: 0.4;
+}
+
+.crater:first-child {
+    left: 5px;
+    top: 15px;
+    height: 0.9375rem;
+    width: 2.5rem;
+    transform: rotate(-45deg);
+}
+
+.crater:last-child {
+    right: 10px;
+    top: 15px;
+    height: 15px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+.night > .notch {
+    background: whitesmoke;
+    box-shadow: 0 0 5px whitesmoke;
+    transform: translate(1.25rem, 0);
+}

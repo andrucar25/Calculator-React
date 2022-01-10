@@ -1,13 +1,299 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+/* Theme 1 */
+
+/* #### Backgrounds */
+
+/* (main background) */
+--VeryDarkDesaturatedBlue1: hsl(222, 26%, 31%);
+
+/* (toggle background, keypad background) */
+--VeryDarkDesaturatedBlue2 : hsl(223, 31%, 20%);
+
+/* (screen background) */
+--VeryDarkDesaturatedBlue3 : hsl(224, 36%, 15%);
+
+ /* Keys */
+
+ /* (key background) */
+--DesaturatedDarkBlue1 : hsl(225, 21%, 49%);
+
+/* (key shadow) */
+--DesaturatedDarkBlue2 : hsl(224, 28%, 35%);
+
+/* (key background, toggle) */
+--Red : hsl(6, 63%, 50%);
+
+/* (key shadow) */
+--DarkRed : hsl(6, 70%, 34%);
+
+/* (key background) */
+--LightGrayishOrange : hsl(30, 25%, 89%);
+
+/* (key shadow) */
+--GrayishOrange : hsl(28, 16%, 65%);
+
+/* Text */
+--VeryDarkGrayishBlue: hsl(221, 14%, 31%);
+--White: hsl(0, 0, 100%);
+
+/* -------------------------------------------------------------------------------- */
+/* ### Theme 2 */
+
+/* #### Backgrounds */
+
+/* (main background) */
+--LightGray : hsl(0, 0%, 90%);
+
+/* (toggle background, keypad background) */
+--GrayishRed : hsl(0, 5%, 81%);
+
+/* (screen background) */
+--VeryLightGray : hsl(0, 0%, 93%);
+
+/* #### Keys */
+
+/* (key background) */
+--DarkModerateCyan : hsl(185, 42%, 37%);
+
+/* (key shadow) */
+--VeryDarkCyan : hsl(185, 58%, 25%);
+
+/* (key background, toggle) */
+--Orange : hsl(25, 98%, 40%);
+
+/* (key shadow) */
+--DarkOrange: hsl(25, 99%, 27%);
+
+/* (key background) */
+--LightGrayishYellow : hsl(45, 7%, 89%);
+
+/* (key shadow) */
+--DarkGrayishOrange : hsl(35, 11%, 61%);
+
+/* #### Text */
+
+--VeryDarkGrayishYellow: hsl(60, 10%, 19%);
+
+/* (text) */
+--White : hsl(0, 0, 100%);
+
+
+/* -------------------------------------------------------------------------------------------- */
+/* ### Theme 3 */
+
+/* #### Backgrounds */
+
+/* (main background) */
+--VeryDarkViolet1: hsl(268, 75%, 9%);
+
+/* (toggle background, keypad background, screen background) */
+--VeryDarkViolet2 : hsl(268, 71%, 12%);
+
+/* #### Keys */
+
+/* (key background) */
+--DarkViolet : hsl(281, 89%, 26%);
+
+/* (key shadow) */
+--VividMagenta : hsl(285, 91%, 52%);
+
+/* (key background, toggle) */
+--PureCyan : hsl(176, 100%, 44%);
+
+/* (key shadow) */
+--SoftCyan : hsl(177, 92%, 70%);
+
+/* (key background) */
+--VeryDarkViolet2 : hsl(268, 47%, 21%);
+
+/* (key shadow) */
+--DarkMagenta : hsl(290, 70%, 36%);
+
+/* #### Text */
+
+--LightYellow: hsl(52, 100%, 62%);
+--VeryDarkBlue: hsl(198, 20%, 13%);
+/* (text) */
+--White: hsl(0, 0, 100%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: 'Spartan', sans-serif;
+  background-color: var(--VeryDarkDesaturatedBlue1);
 }
+
+
+
+.main-container{
+  width: 35%;
+  height: 31.25rem;
+  margin: 5% auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+
+.header-theme-container{
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-container{
+  height: 20%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--VeryDarkDesaturatedBlue3);
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+}
+
+.buttons-container{
+  height: 70%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--VeryDarkDesaturatedBlue2);
+  padding: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  
+}
+
+
+
+/* HeaderTheme */
+.header__title{
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+}
+
+
+/*Buttons*/
+.buttons__grid{
+  display: grid;
+  gap: 1.25rem;
+  grid-auto-rows: 2.6875rem;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+}
+
+.large_buttons{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-auto-rows: 2.6875rem;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  gap: 1.25rem;
+
+}
+
+.button_number{
+  border: none;
+  background-color: var(--LightGrayishOrange);
+  border-radius: 5px;
+  font-size: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  color: var(--VeryDarkGrayishBlue);
+  box-shadow: 0 3px 1px var(--GrayishOrange);
+
+
+}
+
+.button_letter{
+  border: none;
+  background-color: var(--DesaturatedDarkBlue1);
+  border-radius: 5px;
+  font-size: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  color: white;
+  box-shadow: 0 3px 1px var(--DesaturatedDarkBlue2);
+}
+
+.button_calculate{
+  border: none;
+  background-color: var(--Red);
+  border-radius: 5px;
+  font-size: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  color: white;
+  box-shadow: 0 3px 1px var(--DarkRed);
+}
+
+
+/*Hovers*/
+.button_number,
+.button_letter,
+.button_calculate:hover{
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* Theme2 Colors*/
+.header__title_alt{
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--VeryDarkGrayishYellow);
+}
+
+.result-container_alt{
+  height: 20%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--VeryLightGray);
+  display: flex;
+  justify-content: end;
+  padding: 0.625rem;
+}
+
+.buttons-container_alt{
+  height: 70%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--GrayishRed);
+  padding: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  
+}
+
+.button_number_alt{
+  border: none;
+  background-color: var(--LightGrayishYellow);
+  border-radius: 5px;
+  font-size: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  color: var(--VeryDarkGrayishYellow);
+  box-shadow: 0 3px 1px var(--DarkGrayishOrange);
+
+
+}
+
+.button_letter_alt{
+  border: none;
+  background-color: var(--DarkModerateCyan);
+  border-radius: 5px;
+  font-size: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  color: white;
+  box-shadow: 0 3px 1px var(--VeryDarkCyan);
+}
+
+.button_calculate_alt{
+  border: none;
+  background-color: var(--Orange);
+  border-radius: 5px;
+  font-size: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  color: white;
+  box-shadow: 0 3px 1px var(--DarkOrange);
+}
+
